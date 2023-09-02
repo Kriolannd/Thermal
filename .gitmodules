@@ -1,0 +1,12 @@
+[submodule "PhysMode"]
+	path = PhysMode
+	url = https://github.com/Kriolannd/PhysMode.git
+[submodule "Visualizer"]
+	path = Visualizer
+	url = https://github.com/Kriolannd/Visualizer.git
+[submodule "PID_Regulators"]
+	path = PID_Regulators
+	url = https://github.com/Kriolannd/PID_Regulators.git
+[submodule "Worker"]
+	path = Worker
+	url = https://github.com/Kriolannd/Worker.git
