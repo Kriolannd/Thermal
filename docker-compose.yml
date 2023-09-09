@@ -1,0 +1,17 @@
+version: "3"
+services:
+  phys_mode:
+    build: PhysMode/
+    command: python3 PhysMode/manage.py runserver --noreload 0.0.0.0:8000
+    ports:
+      - 8000:8000
+  
+  visualizer:
+    build: Visualizer/
+    command: bash -c "cd Visualizer/visualizer && npm start"
+    ports:
+      - 3000:3000
+
+  pid_regulator:
+    build: PID_Regulators/
+    command: python3 PID_Regulators/pi_controller.py
