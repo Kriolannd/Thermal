@@ -20,9 +20,9 @@ services:
     depends_on:
       - phys-mode
 
-  #worker:
-  #  build: Worker/
-  #  ports:
-  #    - 80:80
-  #  depends_on:
-  #    - phys-mode
+  worker:
+    build: Worker/
+    ports:
+      - 80:80
+    depends_on:
+      - phys-mode
