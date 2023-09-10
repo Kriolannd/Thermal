@@ -3,4 +3,4 @@ up:
 	docker compose up
 update:
 	@echo "Обновление подмодулей"
-	git submodule upate --init --recursive
+	git submodule update --init --recursive
