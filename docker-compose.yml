@@ -1,17 +1,21 @@
 version: "3"
 services:
-  phys_mode:
+  phys-mode:
     build: PhysMode/
-    command: python3 PhysMode/manage.py runserver --noreload 0.0.0.0:8000
+    command: bash -c "echo 'Идет запуск модуля физического моделирования' && python3 PhysMode/manage.py migrate && python3 PhysMode/manage.py runserver --noreload 0.0.0.0:8000"
     ports:
       - 8000:8000
   
   visualizer:
     build: Visualizer/
-    command: bash -c "cd Visualizer/visualizer && npm start"
+    command: bash -c "echo 'Идет запуск модуля визуализации' && cd Visualizer/visualizer && npm start"
     ports:
       - 3000:3000
+    depends_on:
+      - pid-regulator
 
-  pid_regulator:
+  pid-regulator:
     build: PID_Regulators/
-    command: python3 PID_Regulators/pi_controller.py
+    command: bash -c "echo 'Идет запуск модуля ПИД регуляторов' && python3 PID_Regulators/pi_controller.py"
+    depends_on:
+      - phys-mode
