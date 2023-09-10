@@ -19,3 +19,10 @@ services:
     command: bash -c "echo 'Идет запуск модуля ПИД регуляторов' && python3 PID_Regulators/pi_controller.py"
     depends_on:
       - phys-mode
+
+  #worker:
+  #  build: Worker/
+  #  ports:
+  #    - 80:80
+  #  depends_on:
+  #    - phys-mode
