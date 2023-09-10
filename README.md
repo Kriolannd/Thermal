@@ -1,12 +1,5 @@
-# Thermal
-Thermal Regulator
-
-# Available:
-## 1. Физическая модель, Модуль искажений
-## 2. Отображение
-## 3. Рабочее место
-## 4. Пропорционально-интегральный регулятор
-
+# Thermal Regulator
 
 ## Запуск проекта:
-###   `make up`
+###1. make up
+###2. docker compose up
